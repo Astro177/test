@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="lofi">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css framework link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Assignment</title>
+</head>
+<body>
+    <header>
+      <!-- navbar starts -->
+        <div class="navbar bg-base-100 shadow-2xl bg-cyan-300 mt-5 lg:px-12">
+            <div class="navbar-start">
+              <a class="normal-case"><span class="text-4xl font-semibold">Interactive</span><br>
+                Geometry Genius</a>
+            </div>
+            <div class="navbar-end">
+              <a class="btn btn-info rounded-xl hover:bg-violet-600" id="blogs-btn">Blogs</a>
+            </div>
+          </div>
+          <!-- navbar ends -->
+    </header>
+    <main>
+      <!-- card section starts -->
+      <section class="lg:px-12 flex flex-col md:flex-row lg:flex-row">
+       <div class="w-full md:w-[60%] lg:w-[70%] mt-5 grid md:grid-cols-2 lg:grid-cols-3 gap-14">
+        <div class="card w-96 bg-base-100 shadow-xl mt-14 custom-hover">
+            <figure class="px-10 pt-10">
+              <img src="./images/triangle.png" alt="Triangle" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title" id="first-shape">Triangle</h2>
+              <p class="mb-3">Area (A) = 0.5 x b x h</p>
+              <div class="flex gap-5 mb-3">
+              <input type="text" placeholder="b" class="input w-full max-w-xs bg-[#F1F1F1]" id="triangle-first"/>
+              <p class="mt-2">cm</p>
+              <input type="text" placeholder="h" class="input w-full max-w-xs bg-[#F1F1F1]" id="triangle-second"/>
+              <p class="mt-2">cm</p>
+            </div>
+              <div class="card-actions">
+                <button class="btn btn-info rounded-xl hover:bg-violet-600" id="triangle-area">Calculate</button>
+              </div>
+            </div>
+          </div>
+          <div class="card w-96 bg-base-100 shadow-xl mt-14 custom-hover">
+            <figure class="px-10 pt-10">
+              <img src="./images/rectangle.png" alt="Rectangle" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title" id="second-shape">Rectangle</h2>
+              <p class="mb-3">Area (A) = w x l</p>
+              <div class="flex gap-5 mb-3">
+              <input type="text" placeholder="w" class="input w-full max-w-xs bg-[#F1F1F1]"/ id="rectangle-first">
+              <p class="mt-2">cm</p>
+              <input type="text" placeholder="l" class="input w-full max-w-xs bg-[#F1F1F1]" id="rectangle-second"/>
+              <p class="mt-2">cm</p>
+            </div>
+              <div class="card-actions">
+                <button class="btn btn-info rounded-xl hover:bg-violet-600" id="rectangle-area">Calculate</button>
+              </div>
+            </div>
+          </div>
+          <div class="card w-96 bg-base-100 shadow-xl mt-14 custom-hover">
+            <figure class="px-10 pt-10">
+              <img src="./images/parallelogram.png" alt="Parallelogram" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title" id="third-shape">Parallelogram</h2>
+              <p class="mb-3">Area (A) = b x h</p>
+              <div class="flex gap-5 mb-3">
+              <input type="text" placeholder="b" class="input w-full max-w-xs bg-[#F1F1F1]" id="parallelogram-first"/>
+              <p class="mt-2">cm</p>
+              <input type="text" placeholder="h" class="input w-full max-w-xs bg-[#F1F1F1]" id="parallelogram-second"/>
+              <p class="mt-2">cm</p>
+            </div>
+              <div class="card-actions">
+                <button class="btn btn-info rounded-xl hover:bg-violet-600" id="parallelogram-area">Calculate</button>
+              </div>
+            </div>
+          </div>
+          <div class="card w-96 bg-base-100 shadow-xl mt-14 custom-hover">
+            <figure class="px-10 pt-10">
+              <img src="./images/rhombus.png" alt="Rhombus" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title" id="fourth-shape">Rhombus</h2>
+              <p class="mb-3">Area (A) = 0.5 x d<sub>1</sub> x d<sub>2</sub> </p>
+              <div class="flex gap-5 mb-3">
+              <p class="font-semibold">d<sub>1</sub> = <span id="rhombus-first">16</span>cm , d<sub>2</sub> <span id="rhombus-second">8</span>cm</p>
+            </div>
+              <div class="card-actions">
+                <button class="btn btn-info rounded-xl hover:bg-violet-600" id="rhombus-area">Calculate</button>
+              </div>
+            </div>
+          </div>
+          <div class="card w-96 bg-base-100 shadow-xl mt-14 custom-hover">
+            <figure class="px-10 pt-10">
+              <img src="./images/pentagon.png" alt="Pentagon" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title" id="fifth-shape">Pentagon</h2>
+              <p class="mb-3">Area (A) = 0.5 x p x b</p>
+              <div class="flex gap-5 mb-3">
+               <p class="font-semibold">p = <span id="pentagon-first">6</span>cm , b = <span id="pentagon-second">10</span>cm</p>
+            </div>
+              <div class="card-actions">
+                <button class="btn btn-info rounded-xl hover:bg-violet-600" id="pentagon-area">Calculate</button>
+              </div>
+            </div>
+          </div>
+          <div class="card w-96 bg-base-100 shadow-xl mt-14 custom-hover">
+            <figure class="px-10 pt-10">
+              <img src="./images/ellipse.png" alt="ellipse" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title" id="sixth-shape">Ellipse</h2>
+              <p class="mb-3">Area (A) = 3.14 x a x b </p>
+              <div class="flex gap-5 mb-3">
+            <p class="font-semibold">a = <span id="ellipse-first">10</span>cm , b = <span id="ellipse-second">4</span>cm</p>
+            </div>
+              <div class="card-actions">
+                <button class="btn btn-info rounded-xl hover:bg-violet-600" id="ellipse-area">Calculate</button>
+              </div>
+            </div>
+          </div>
+       </div>
+       <!-- card section ends -->
+
+       <!-- calculation section starts -->
+       <div  class="w-full md:w-[30%] lg:w-[30%] mx-auto">
+        <h1 class="font-bold underline text-3xl text-center mt-5">Area Calculation</h1>
+          <table class="table w-full mt-5 mx-12">
+            <tbody id="result-container">
+              
+            </tbody>
+          </table>
+        </div>
+      </div>
+      </section>
+      <!-- calculation section ends -->
+    </main>
+
+    <!-- js file links -->
+
+    <script src="JS/utilities.js"></script>
+    <script src="js/calucaltions.js"></script>
+</body>
+</html>
